@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+    <xsd:element name="rapport">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element type='TYPE_MANDAT' name='mandat' maxOccurs="unbounded"></xsd:element>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+    <xsd:complexType name="TYPE_MANDAT">
+        <xsd:sequence>
+            <xsd:element type="TYPE_PERSONNE" name='expediteur' maxOccurs="1"></xsd:element>
+            <xsd:element type="TYPE_PERSONNE" name='destinataire' maxOccurs="1"></xsd:element>
+        </xsd:sequence>
+        <xsd:attribute type="xsd:ID" name="num" use='required'></xsd:attribute>
+        <xsd:attribute type="xsd:date" name="date" use="required"></xsd:attribute>
+        <xsd:attribute type="xsd:float" name="montant" use="required"></xsd:attribute>
+        <xsd:attribute name="etat">
+            <xsd:simpleType>
+                <xsd:restriction base="xsd:string">
+                    <xsd:enumeration value="recu"></xsd:enumeration>
+                    <xsd:enumeration value="nonRecu"></xsd:enumeration>
+                </xsd:restriction>
+            </xsd:simpleType>
+        </xsd:attribute>
+    </xsd:complexType>
+    <xsd:complexType name="TYPE_PERSONNE">
+        <xsd:attribute name='cin' type="xsd:string" use="required"></xsd:attribute>
+        <xsd:attribute name='nom' type="xsd:string" use="required"></xsd:attribute>
+        <xsd:attribute name='prenom' type="xsd:string" use="required"></xsd:attribute>
+        <xsd:attribute name='ville' type="xsd:string" use="required"></xsd:attribute>      
+    </xsd:complexType>
+
+</xsd:schema>

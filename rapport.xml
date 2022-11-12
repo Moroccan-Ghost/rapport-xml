@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rapport xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="rapport.xsd">
+    <mandat num="M0" date="2007-01-01" montant="10000" etat="recu">
+        <expediteur cin="A123" nom="slimani" prenom="youssef" ville="casa"/>
+        <destinataire cin="B123" nom="hassouni" prenom="laila" ville="fes"/>
+    </mandat>
+    <mandat num="M1" date="2010-05-11" montant="2100" etat="nonRecu">
+        <expediteur cin="A546" nom="Alaoui" prenom="ali" ville="meknes"/>
+        <destinataire cin="B1443" nom="Alaoui" prenom="laila" ville="tanger"/>
+    </mandat>
+    <mandat num="M2" date="2022-11-11" montant="500" etat="recu">
+        <expediteur cin="C123" nom="qasmi" prenom="yassin" ville="kenitra"/>
+        <destinataire cin="D123" nom="hassouni" prenom="ahmed" ville="rabat"/>
+    </mandat>
+</rapport>
